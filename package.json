@@ -1,0 +1,10 @@
+{
+  "name": "achievement-services-broker-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static bilingual website for Achievement Services Broker.",
+  "scripts": {
+    "build": "node build-site.js",
+    "serve": "node --preserve-symlinks-main local-server.js"
+  }
+}
