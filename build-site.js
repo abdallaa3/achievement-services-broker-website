@@ -3,6 +3,7 @@ const path = require("path");
 
 const domain = "https://achbroker.com";
 const siteBase = "";
+const logoImage = `${domain}/assets/img/achievement-logo.png?v=20260513`;
 const phone = "+971553386176";
 const phoneHref = "tel:+971553386176";
 const whatsapp = "https://wa.me/971553386176";
@@ -302,6 +303,8 @@ function schema(lang, page, slug, serviceName) {
       "@type": "Organization",
       "@id": `${domain}/#organization`,
       name: "Achievement Services Broker",
+      logo: logoImage,
+      image: logoImage,
       url: domain,
       telephone: phone,
       sameAs: Object.values(socials)
@@ -310,7 +313,7 @@ function schema(lang, page, slug, serviceName) {
       "@type": "LocalBusiness",
       "@id": `${domain}/#localbusiness`,
       name: "Achievement Services Broker",
-      image: `${domain}/assets/img/hero-al-ain.png`,
+      image: logoImage,
       url: domain,
       telephone: phone,
       address: {
@@ -353,11 +356,15 @@ function head(lang, page, slug, serviceName) {
   <meta property="og:title" content="${esc(page.title)}">
   <meta property="og:description" content="${esc(page.description)}">
   <meta property="og:url" content="${url}">
-  <meta property="og:image" content="${domain}/assets/img/hero-al-ain.png">
+  <meta property="og:image" content="${logoImage}">
+  <meta property="og:image:secure_url" content="${logoImage}">
+  <meta property="og:image:alt" content="Achievement Services Broker Logo">
   <meta property="og:locale" content="${lang === "ar" ? "ar_AE" : "en_AE"}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${logoImage}">
   <meta name="theme-color" content="#06111f">
-  <link rel="icon" type="image/png" href="${assetHref("/favicon.png")}">
-  <link rel="apple-touch-icon" href="${assetHref("/assets/img/achievement-logo.png")}">
+  <link rel="icon" type="image/png" href="${assetHref("/favicon.png?v=20260513")}">
+  <link rel="apple-touch-icon" href="${assetHref("/assets/img/achievement-logo.png?v=20260513")}">
   <link rel="stylesheet" href="${assetHref("/assets/css/styles.css?v=20260513")}">
   ${schema(lang, page, slug, serviceName)}
 </head>
