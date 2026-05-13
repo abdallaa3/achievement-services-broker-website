@@ -4,7 +4,7 @@ const path = require("path");
 
 const root = __dirname;
 const port = Number(process.env.PORT || 4174);
-const basePath = "/achievement-services-broker-website";
+const basePath = process.env.BASE_PATH || "";
 
 const types = {
   ".html": "text/html; charset=utf-8",
@@ -32,11 +32,11 @@ function safePath(urlPath) {
     cleanPath = `${basePath}/ar/`;
   }
 
-  if (cleanPath === basePath) {
+  if (basePath && cleanPath === basePath) {
     cleanPath = `${basePath}/`;
   }
 
-  if (cleanPath.startsWith(`${basePath}/`)) {
+  if (basePath && cleanPath.startsWith(`${basePath}/`)) {
     cleanPath = cleanPath.slice(basePath.length);
   }
 

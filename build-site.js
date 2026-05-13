@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const domain = "https://achbroker.com";
-const siteBase = "/achievement-services-broker-website";
+const siteBase = "";
 const phone = "+971553386176";
 const phoneHref = "tel:+971553386176";
 const whatsapp = "https://wa.me/971553386176";
