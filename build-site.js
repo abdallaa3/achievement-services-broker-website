@@ -8,6 +8,7 @@ const phone = "+971553386176";
 const phoneHref = "tel:+971553386176";
 const whatsapp = "https://wa.me/971553386176";
 const maps = "https://maps.app.goo.gl/ERKE6k4wPUntNHCD7";
+const googleAdsId = "AW-17857671203";
 const socials = {
   facebook: "https://www.facebook.com/Achievement.services/",
   instagram: "https://www.instagram.com/achievement.services/",
@@ -338,6 +339,16 @@ function schema(lang, page, slug, serviceName) {
   return `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph })}</script>`;
 }
 
+function googleAdsTag() {
+  return `<script async src="https://www.googletagmanager.com/gtag/js?id=${googleAdsId}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${googleAdsId}');
+  </script>`;
+}
+
 function head(lang, page, slug, serviceName) {
   const url = pageUrl(lang, slug);
   const other = lang === "ar" ? "en" : "ar";
@@ -366,6 +377,7 @@ function head(lang, page, slug, serviceName) {
   <link rel="icon" type="image/png" href="${assetHref("/favicon.png?v=20260513")}">
   <link rel="apple-touch-icon" href="${assetHref("/assets/img/achievement-logo.png?v=20260513")}">
   <link rel="stylesheet" href="${assetHref("/assets/css/styles.css?v=20260513")}">
+  ${googleAdsTag()}
   ${schema(lang, page, slug, serviceName)}
 </head>
 <body dir="${labels[lang].dir}" style="--hero-image: url('${assetHref("/assets/img/hero-al-ain.png")}')">

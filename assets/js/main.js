@@ -1,4 +1,40 @@
 (function () {
+  const googleAdsEvents = {
+    whatsapp: "AW-17857671203/_YzhCMbqiK0cEKPgmcNC",
+    phone: "AW-17857671203/elAbCPXAia0cEKPgmcNC"
+  };
+
+  const sendGoogleAdsConversion = (sendTo) => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", "conversion", {
+      send_to: sendTo,
+      value: 1.0,
+      currency: "EGP"
+    });
+  };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+    if (href.includes("wa.me/971553386176")) {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "whatsapp_click", {
+          event_category: "contact",
+          event_label: href
+        });
+      }
+      sendGoogleAdsConversion(googleAdsEvents.whatsapp);
+    } else if (href === "tel:+971553386176" && typeof window.gtag === "function") {
+      window.gtag("event", "phone_click", {
+        event_category: "contact",
+        event_label: href
+      });
+      sendGoogleAdsConversion(googleAdsEvents.phone);
+    }
+  });
+
   const header = document.querySelector(".site-header");
   const updateHeader = () => {
     if (!header) return;
