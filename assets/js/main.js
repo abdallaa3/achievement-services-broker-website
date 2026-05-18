@@ -87,6 +87,13 @@
             "Selected Service: " + (data.get("service") || ""),
             "Message: " + (data.get("message") || "")
           ];
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "whatsapp_click", {
+          event_category: "contact",
+          event_label: "contact_form"
+        });
+      }
+      sendGoogleAdsConversion(googleAdsEvents.whatsapp);
       window.open("https://wa.me/971553386176?text=" + encodeURIComponent(parts.join("\n")), "_blank", "noopener");
     });
   });
