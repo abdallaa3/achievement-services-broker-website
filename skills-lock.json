@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "paid-ads-strategy": {
+      "source": "kostja94/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/strategies/commercial/paid-ads/SKILL.md",
+      "computedHash": "511fadf22b93b777f9b093cbc015992522a704ce1cdd02e1809d2f29fd7edf93"
+    }
+  }
+}

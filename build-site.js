@@ -148,13 +148,41 @@ const contactServiceOptions = {
   ]
 };
 
+const adComplianceNotice = {
+  ar: {
+    title: "تنويه للشفافية",
+    text: "Achievement Services Broker مقدم وساطة ومساعدة تأمين خاص ومستقل. لا نعمل كجهة إصدار أو اعتماد، ولا ندعي أي ارتباط بأي جهة إصدار أو اعتماد خارجية. دورنا يقتصر على الاستشارة، تنسيق خيارات التأمين، ومساعدة العملاء على مقارنة العروض المتاحة."
+  },
+  en: {
+    title: "Transparency Notice",
+    text: "Achievement Services Broker is a private, independent insurance brokerage and assistance provider. We do not act as an issuing or approval body, and we do not claim affiliation with any external issuing or approval body. Our role is limited to consultation, insurance-option coordination, and helping clients compare available offers."
+  }
+};
+
+const adSafeFooterServices = {
+  ar: [
+    ["car-insurance-al-ain", "تأمين السيارات"],
+    ["health-insurance-uae", "التأمين الصحي"],
+    ["business-setup-al-ain", "تأسيس الشركات"],
+    ["business-services-al-ain", "خدمات الأعمال"],
+    ["contact", "استشارة عامة"]
+  ],
+  en: [
+    ["car-insurance-al-ain", "Car Insurance"],
+    ["health-insurance-uae", "Health Insurance"],
+    ["business-setup-al-ain", "Business Setup"],
+    ["business-services-al-ain", "Business Services"],
+    ["contact", "General Consultation"]
+  ]
+};
+
 const pages = {
   ar: {
     home: { slug: "", title: "Achievement Services Broker | الرئيسية", description: "Achievement Services Broker يقدم خدمات تأمين سيارات وتأمين صحي وتأسيس شركات ودعم الإقامة وخدمات الأعمال في العين، أبوظبي عبر واتساب واتصال مباشر.", h1: "خدمات أعمال وتأمين احترافية في العين، أبوظبي", intro: "نساعد الأفراد والشركات في خدمات التأمين، تأسيس الأعمال، دعم الإقامة، وتجهيز المستندات بطريقة سهلة ومنظمة." },
     about: { slug: "about", title: "Achievement Services Broker | من نحن", description: "تعرف على Achievement Services Broker في العين، أبوظبي وخبرتنا في خدمات التأمين والأعمال وتجهيز المستندات داخل الإمارات.", h1: "من نحن", intro: "حلول أعمال وخدمات احترافية تساعد الأفراد والشركات على ترتيب خطواتهم بوضوح داخل دولة الإمارات." },
     services: { slug: "services", title: "Achievement Services Broker | الخدمات", description: "تأمين سيارات في العين، أبوظبي، التأمين الصحي، تأسيس الشركات، دعم الإقامة، خدمات الأعمال، وخدمات المستندات.", h1: "خدماتنا", intro: "مجموعة خدمات منظمة للأفراد والشركات مع متابعة واضحة وخيارات تواصل سريعة." },
-    car: { slug: "car-insurance-al-ain", title: "Achievement Services Broker | تأمين السيارات", description: "مساعدة في تأمين السيارات في العين، أبوظبي ومراجعة الخيارات المتاحة ودعم تأمين المركبات للأفراد والشركات عبر واتساب.", h1: "تأمين سيارات في العين، أبوظبي", intro: "نساعدك في مراجعة خيارات تأمين مركبات مناسبة داخل العين، أبوظبي والإمارات مع استشارة سريعة عبر واتساب." },
-    health: { slug: "health-insurance-uae", title: "Achievement Services Broker | التأمين الصحي", description: "خيارات التأمين الصحي في العين، أبوظبي للأفراد والشركات والعمالة المنزلية مع دعم اختيار التغطية المناسبة.", h1: "التأمين الصحي في العين، أبوظبي", intro: "دعم احترافي لاختيار تغطية صحية مناسبة للأفراد والشركات والعمالة المنزلية داخل الإمارات." },
+    car: { slug: "car-insurance-al-ain", title: "Achievement Services Broker | وساطة تأمين السيارات", description: "وساطة ومساعدة خاصة لمراجعة خيارات تأمين السيارات في العين، أبوظبي للأفراد والشركات عبر واتساب.", h1: "تأمين سيارات في العين، أبوظبي", intro: "نساعدك كمقدم وساطة خاص ومستقل على مراجعة خيارات تأمين المركبات المتاحة ومقارنة التغطيات بطريقة واضحة عبر واتساب." },
+    health: { slug: "health-insurance-uae", title: "Achievement Services Broker | وساطة التأمين الصحي", description: "وساطة ومساعدة خاصة لمراجعة خيارات التأمين الصحي في العين، أبوظبي للأفراد والشركات مع دعم اختيار التغطية المناسبة.", h1: "التأمين الصحي في العين، أبوظبي", intro: "نقدم مساعدة خاصة ومستقلة لمراجعة خيارات التأمين الصحي للأفراد والشركات ومقارنة التغطيات المتاحة بوضوح." },
     setup: { slug: "business-setup-al-ain", title: "Achievement Services Broker | تأسيس الشركات", description: "استشارة تأسيس شركات في العين، أبوظبي، دعم الرخص التجارية، تجهيز مستندات الشركات، وتنسيق خدمات الأعمال.", h1: "تأسيس شركات في العين، أبوظبي", intro: "استشارة منظمة لتأسيس الأعمال وتجهيز المستندات التجارية مع فهم احتياجات السوق المحلي." },
     residency: { slug: "residency-support-uae", title: "Achievement Services Broker | دعم الإقامة", description: "دعم تجديد الإقامة، تنسيق تأمين الإقامة، دعم الهوية الإماراتية، وتذكيرات التجديد في الإمارات.", h1: "دعم الإقامة", intro: "مساعدة منظمة في متابعة خطوات الإقامة والتجديدات والتنسيق المرتبط بالمستندات والتأمين." },
     business: { slug: "business-services-al-ain", title: "Achievement Services Broker | خدمات الأعمال", description: "خدمات الأعمال في العين، أبوظبي تشمل تجهيز المستندات، دعم الشركات، تذكيرات المواعيد والتجديد، ومتابعة العملاء.", h1: "خدمات الأعمال في العين، أبوظبي", intro: "دعم يومي ومنظم للشركات الصغيرة ورواد الأعمال في المستندات والمتابعة والتنسيق الإداري." },
@@ -166,8 +194,8 @@ const pages = {
     home: { slug: "", title: "Achievement Services Broker | Home", description: "Achievement Services Broker provides car insurance, health insurance, business setup, residency support, documentation services, and business services in Al Ain, Abu Dhabi.", h1: "Business and Insurance Services in Al Ain, Abu Dhabi", intro: "We help individuals and companies with insurance services, business setup, residency support, and document preparation in a clear, organized way." },
     about: { slug: "about", title: "Achievement Services Broker | About Us", description: "Learn about Achievement Services Broker in Al Ain, Abu Dhabi and our professional support across insurance, business services, and documentation.", h1: "About Us", intro: "Professional business solutions and support that help individuals and companies complete their steps with clarity across the UAE." },
     services: { slug: "services", title: "Achievement Services Broker | Services", description: "Car Insurance in Al Ain, Abu Dhabi, Health Insurance, Business Setup, Residency Support, Business Services, and Documentation Services.", h1: "Our Services", intro: "A focused service portfolio for individuals and companies, with clear follow-up and fast contact options." },
-    car: { slug: "car-insurance-al-ain", title: "Achievement Services Broker | Car Insurance", description: "Vehicle insurance assistance in Al Ain, Abu Dhabi, support reviewing available options, and WhatsApp consultation for individuals and companies.", h1: "Car Insurance in Al Ain, Abu Dhabi", intro: "We help you review available vehicle insurance options in Al Ain, Abu Dhabi and across the UAE with fast WhatsApp consultation." },
-    health: { slug: "health-insurance-uae", title: "Achievement Services Broker | Health Insurance", description: "Health insurance options in Al Ain, Abu Dhabi for individuals, companies, and domestic workers, with support choosing suitable coverage.", h1: "Health Insurance in Al Ain, Abu Dhabi", intro: "Professional support for choosing suitable health coverage for individuals, companies, and domestic workers in the UAE." },
+    car: { slug: "car-insurance-al-ain", title: "Achievement Services Broker | Car Insurance Brokerage", description: "Private brokerage assistance for reviewing car insurance options in Al Ain, Abu Dhabi for individuals and companies via WhatsApp.", h1: "Car Insurance in Al Ain, Abu Dhabi", intro: "As a private, independent brokerage support provider, we help you review available vehicle insurance options and compare coverage clearly via WhatsApp." },
+    health: { slug: "health-insurance-uae", title: "Achievement Services Broker | Health Insurance Brokerage", description: "Private brokerage assistance for reviewing health insurance options in Al Ain, Abu Dhabi for individuals and companies.", h1: "Health Insurance in Al Ain, Abu Dhabi", intro: "We provide private, independent assistance for reviewing health insurance options for individuals and companies and comparing available coverage clearly." },
     setup: { slug: "business-setup-al-ain", title: "Achievement Services Broker | Business Setup", description: "Business setup consultation in Al Ain, Abu Dhabi, trade license support, company documentation support, and business service coordination.", h1: "Business Setup in Al Ain, Abu Dhabi", intro: "Organized consultation for business setup, commercial documentation, and practical local market guidance." },
     residency: { slug: "residency-support-uae", title: "Achievement Services Broker | Residency Support", description: "Residency renewal support, Emirates ID support, insurance coordination, and renewal reminders in the UAE.", h1: "Residency Support UAE", intro: "Organized assistance with residency-related follow-up, renewals, documentation, and insurance coordination." },
     business: { slug: "business-services-al-ain", title: "Achievement Services Broker | Business Services", description: "Business Services in Al Ain, Abu Dhabi including documentation support, corporate service support, reminders, client follow-up, and preparation.", h1: "Business Services in Al Ain, Abu Dhabi", intro: "Daily support for small companies and entrepreneurs with documents, follow-up, reminders, and coordination." },
@@ -253,6 +281,7 @@ function header(lang, activeSlug) {
 
 function footer(lang) {
   const l = labels[lang];
+  const footerServices = adSafeFooterServices[lang];
   return `<footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -260,7 +289,7 @@ function footer(lang) {
       <p>${l.footerText}</p>
     </div>
     <div><h3>${l.links}</h3><div class="footer-links">${nav.map(([slug, key]) => `<a href="${localHref(lang, slug)}">${l[key]}</a>`).join("")}</div></div>
-    <div><h3>${l.services}</h3><div class="footer-links">${services[lang].map((s) => `<a href="${localHref(lang, s[0])}">${s[1]}</a>`).join("")}</div></div>
+    <div><h3>${l.services}</h3><div class="footer-links">${footerServices.map((s) => `<a href="${localHref(lang, s[0])}">${s[1]}</a>`).join("")}</div></div>
     <div><h3>${l.contactInfo}</h3><div class="footer-links"><a href="${phoneHref}">${phone}</a><a href="${whatsapp}" ${externalAttrs}>WhatsApp</a><a href="${maps}" ${externalAttrs}>${l.location}</a></div></div>
   </div>
   <div class="container copyright">© ${new Date().getFullYear()} Achievement Services Broker. achbroker.com</div>
@@ -518,19 +547,45 @@ function servicesPage(lang) {
   return layout(lang, p, p.slug, body);
 }
 
+function complianceNotice(lang) {
+  const notice = adComplianceNotice[lang];
+  return `<section class="section alt">
+  <div class="container">
+    <article class="card content-block compliance-note">
+      <span class="section-label">${notice.title}</span>
+      <p>${notice.text}</p>
+    </article>
+  </div>
+</section>`;
+}
+
+function serviceImageAlt(lang, key, fallback) {
+  const altText = {
+    ar: {
+      car: "استشارة خاصة لمقارنة خيارات تأمين السيارات",
+      health: "استشارة خاصة لمقارنة خيارات التأمين الصحي"
+    },
+    en: {
+      car: "Private consultation for comparing car insurance options",
+      health: "Private consultation for comparing health insurance options"
+    }
+  };
+  return (altText[lang] && altText[lang][key]) || fallback;
+}
+
 const serviceDetails = {
   car: {
     image: "car-insurance.png",
     bullets: {
-      ar: ["خيارات تأمين متعددة للمركبات.", "مساعدة في مراجعة الخطط المتاحة.", "دعم تأمين السيارات للأفراد والشركات.", "استشارة سريعة عبر واتساب."],
-      en: ["Multiple vehicle insurance options.", "Assistance reviewing available plans.", "Car insurance support for individuals and companies.", "Fast WhatsApp consultation."]
+      ar: ["مراجعة خيارات تأمين المركبات المتاحة.", "مساعدة في مقارنة التغطيات والأسعار والشروط.", "وساطة خاصة للأفراد والشركات.", "استشارة سريعة عبر واتساب من مقدم خدمة خاص مستقل."],
+      en: ["Review available vehicle insurance options.", "Assistance comparing coverage, pricing, and terms.", "Private brokerage support for individuals and companies.", "Fast WhatsApp consultation from an independent private provider."]
     }
   },
   health: {
     image: "consultation-health.png",
     bullets: {
-      ar: ["خيارات للأفراد والشركات والعمالة المنزلية.", "دعم اختيار التغطية المناسبة.", "متابعة تذكيرات التجديد.", "تواصل سريع عبر واتساب."],
-      en: ["Options for individuals, companies, and domestic workers.", "Support choosing suitable coverage.", "Renewal reminders.", "Fast WhatsApp contact."]
+      ar: ["مراجعة خيارات التأمين الصحي المتاحة.", "دعم اختيار تغطية مناسبة للأفراد والشركات.", "مساعدة في فهم المنافع وحدود التغطية.", "تواصل سريع عبر واتساب من مقدم خدمة خاص مستقل."],
+      en: ["Review available health insurance options.", "Support choosing suitable coverage for individuals and companies.", "Help understanding benefits and coverage limits.", "Fast WhatsApp contact from an independent private provider."]
     }
   },
   setup: {
@@ -568,6 +623,7 @@ function servicePage(lang, key) {
   const data = serviceDetails[key];
   const ar = lang === "ar";
   const serviceName = p.h1;
+  const adLandingPage = key === "car" || key === "health";
   const body = `${pageHero(lang, p, p.slug)}
 <section class="section">
   <div class="container split">
@@ -578,15 +634,16 @@ function servicePage(lang, key) {
       <ul class="list">${data.bullets[lang].map((b) => `<li>${b}</li>`).join("")}</ul>
       <div class="hero-actions"><a class="btn btn-gold" href="${whatsapp}" ${externalAttrs}>${labels[lang].whatsapp}</a><a class="btn btn-outline" href="${phoneHref}">${labels[lang].call}</a></div>
     </div>
-    <figure class="media-frame"><img src="${assetHref(`/assets/img/${data.image}`)}" alt="${esc(p.h1)}" loading="lazy"></figure>
+    <figure class="media-frame"><img src="${assetHref(`/assets/img/${data.image}`)}" alt="${esc(serviceImageAlt(lang, key, p.h1))}" loading="lazy"></figure>
   </div>
 </section>
-<section class="section alt">
+${adLandingPage ? complianceNotice(lang) : ""}
+${adLandingPage ? "" : `<section class="section alt">
   <div class="container">
     <div class="section-head center"><span class="section-label">${ar ? "خدمات مرتبطة" : "Related Services"}</span><h2>${ar ? "قد تحتاج أيضاً إلى" : "You may also need"}</h2></div>
     ${serviceCards(lang, 3)}
   </div>
-</section>${cta(lang)}`;
+</section>`}${cta(lang)}`;
   return layout(lang, p, p.slug, body, serviceName);
 }
 
